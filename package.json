@@ -1,0 +1,19 @@
+{
+  "name": "api-boilerplate",
+  "version": "1.0.0",
+  "description": "Node API Rest skeleton",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pierslabs/node-api-boilerplate.git"
+  },
+  "author": "Pedro Losas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pierslabs/node-api-boilerplate/issues"
+  },
+  "homepage": "https://github.com/pierslabs/node-api-boilerplate#readme"
+}
