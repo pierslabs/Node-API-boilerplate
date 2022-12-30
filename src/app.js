@@ -1,11 +1,19 @@
+require('dotenv').config({
+  path: process.env.NODE_ENV === 'development' ? 'dev.env' : '.env',
+});
 const express = require('express');
 const cors = require('cors');
+const { connectMongoDb } = require('./config/mongo.db.js');
+
+const MONGO_URI = process.env.MONGO_URI;
+
 const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
+connectMongoDb(MONGO_URI);
 app.use('/', (req, res) => {
   res.send('Api --boilerplate');
 });

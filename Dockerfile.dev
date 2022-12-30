@@ -10,6 +10,8 @@ RUN npm install -g nodemon
 
 COPY ./ ./
 
-EXPOSE $PORT
+ENV NODE_ENV=development
+
+EXPOSE 3000
 
 CMD ["nodemon", "/app/index.js"]

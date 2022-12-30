@@ -1,4 +1,6 @@
-require('dotenv').config({});
+require('dotenv').config({
+  path: process.env.NODE_ENV === 'development' ? 'dev.env' : '.env',
+});
 const http = require('http');
 const app = require('../app.js');
 
