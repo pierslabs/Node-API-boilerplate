@@ -1,4 +1,4 @@
 node_modules
 .env
-mongoDB
+mongo
 package-lock.json
