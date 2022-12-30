@@ -15,7 +15,7 @@ fs.readdirSync(pathRouter).filter((file) => {
 
   if (!skipIndex) {
     return router.use(
-      `${fileWithOutExtension}`,
+      `/${fileWithOutExtension}`,
       require(`./${fileWithOutExtension}`)
     );
   }
