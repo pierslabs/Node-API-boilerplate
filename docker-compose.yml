@@ -9,7 +9,7 @@ services:
     container_name: boilerplate
     restart: unless-stopped
     ports:
-      - 8081:3000
+      - 8180:3000
     volumes:
       - /usr/src/app/node_modules
       - ./:/app
@@ -21,7 +21,5 @@ services:
     container_name: boilerplate-mongodb
     environment:
       - MONGO_INITDB_DATABASE=boilerplate
-    volumes:
-      - ./mongo:/data/db
     ports:
       - 27017:27017  
