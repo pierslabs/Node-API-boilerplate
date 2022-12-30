@@ -1,13 +1,14 @@
 // config Mongo DB
 const mongoose = require('mongoose');
-
+const logger = require('npmlog');
 module.exports.connectMongoDb = async (uri) => {
   try {
     mongoose.set('strictQuery', true);
     const db = await mongoose.connect(uri, {});
-    console.log(`Database ${db.connections[0].name} connected.`);
+    logger.info('Database mongo:', db.connections[0].name);
     return db;
   } catch (error) {
+    logger.error(error);
     process.exit(1);
   }
 };
