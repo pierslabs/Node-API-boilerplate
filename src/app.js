@@ -15,7 +15,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 app.use(morgan('dev'));
 
-connectMongoDb(MONGO_URI);
+// connectMongoDb(MONGO_URI);
 
 app.use('/api/v1', require('./api/routes'));
 app.use('/', (req, res) => {
