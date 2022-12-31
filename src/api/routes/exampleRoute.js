@@ -8,9 +8,12 @@ const {
   deleteExample,
 } = require('../controllers/exampleController');
 
+// const { bodyValidator, paramValidator } = require('../middlewares/validators');
+
 router.get('/', getExamples);
 
-router.post('/', createExample);
+// Example Validator
+router.post('/', /* bodyValidator,*/ createExample);
 
 router.get('/:exampleid', getExampleId);
 

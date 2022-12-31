@@ -1,3 +1,4 @@
+const { validationResult } = require('express-validator');
 const ExampleService = require('../../services/exampleService');
 
 module.exports.getExamples = (req, res) => {
@@ -11,6 +12,11 @@ module.exports.getExampleId = (req, res) => {
 };
 
 module.exports.createExample = (req, res) => {
+  //  Example validator
+  // const errors = validationResult(req);
+  // if (!errors.isEmpty()) {
+  //   return res.status(400).json({ errors: errors.array() });
+  // }
   const example = ExampleService.instance().createExample();
   res.status(201).json({ data: example });
 };
